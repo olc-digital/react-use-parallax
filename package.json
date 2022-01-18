@@ -1,6 +1,6 @@
 {
   "name": "react-parallax-hook",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "An easy to use and customisable parallax implementation",
   "main": "index.js",
   "repository": {
@@ -15,5 +15,6 @@
   "homepage": "https://github.com/olc-digital/react-use-parallax#readme",
   "devDependencies": {
     "react": "^17.0.2"
-  }
+  },
+  "keywords": ["react", "react hook", "hook", "parallax", "useParallax", "ref", "useRef", "tiny", "small", "beta"]
 }
