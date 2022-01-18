@@ -10,6 +10,7 @@ return (
     <div ref={parallaxRef()} />
     <img ref={parallaxRef({ multiplier: -120 })}>
   </>
+)
 
 ```
 
