@@ -3,6 +3,10 @@
 A simple hook for easily implementing Parallax.
 
 ```js
+import { useParallax } from 'react-parallax-hook'
+```
+
+```js
 const parallaxRef = useParallax();
 
 return (
