@@ -18,7 +18,7 @@ exports.useParallax = () => {
       ).toFixed(2);
 
       targets.current[key].element.style.transform = `translateY(${
-        fromCenter * (targets.current[key].multiplier || -60)
+        fromCenter * (targets.current[key]?.config.multiplier || -60)
       }px)`;
     });
   };
