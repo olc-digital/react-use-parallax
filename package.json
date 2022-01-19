@@ -1,6 +1,6 @@
 {
   "name": "react-parallax-hook",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "An easy to use and customisable parallax implementation",
   "main": "index.js",
   "repository": {
@@ -16,5 +16,19 @@
   "devDependencies": {
     "react": "^17.0.2"
   },
-  "keywords": ["react", "react hook", "hook", "parallax", "useParallax", "ref", "useRef", "tiny", "small", "beta"]
+  "keywords": [
+    "react",
+    "react hook",
+    "hook",
+    "parallax",
+    "useParallax",
+    "ref",
+    "useRef",
+    "tiny",
+    "small",
+    "beta"
+  ],
+  "dependencies": {
+    "react-intersection-observer": "^8.33.1"
+  }
 }
