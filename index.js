@@ -42,6 +42,10 @@ exports.useParallax = () => {
 
   return (config) => {
     return (el) => {
+      if (!el) {
+        return;
+      }
+
       const index = `${count.current++}`;
       targets.current[index] = {
         element: el,
