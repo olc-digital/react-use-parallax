@@ -4,31 +4,27 @@ const { observe } = require('react-intersection-observer');
 exports.useParallax = () => {
   const targets = useRef({});
 
-  const calculateParallax = useContext(() => {
-    Object.keys(targets?.current)
-      .filter((key) => targets.current[key]?.inView)
-      .map((key) => {
-        if (!targets.current[key]?.element) {
-          return;
-        }
-
-        const { y, top, height } =
-          targets.current[key].element.getBoundingClientRect();
-
-        const fromCenter = +(
-          ((y ?? top) + height / 2) / (window.innerHeight / 2) -
-          1
-        ).toFixed(2);
-
-        targets.current[key].element.style.transform = `translateY(${
-          fromCenter * (targets.current[key]?.config.multiplier || -60)
-        }px)`;
-      });
-  }, []);
-
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      calculateParallax();
+      Object.keys(targets?.current)
+        .filter((key) => targets.current[key]?.inView)
+        .map((key) => {
+          if (!targets.current[key]?.element) {
+            return;
+          }
+
+          const { y, top, height } =
+            targets.current[key].element.getBoundingClientRect();
+
+          const fromCenter = +(
+            ((y ?? top) + height / 2) / (window.innerHeight / 2) -
+            1
+          ).toFixed(2);
+
+          targets.current[key].element.style.transform = `translateY(${
+            fromCenter * (targets.current[key]?.config.multiplier || -60)
+          }px)`;
+        });
     });
 
     return () => {
