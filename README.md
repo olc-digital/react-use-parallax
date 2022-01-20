@@ -26,8 +26,12 @@ the parallaxRef method accepts these options:
 }
 ```
 
-#### Todo
+## Performance
 
-- Use intersection observer to improve performance
+A single `window.onScroll` event is used per component. Parallax values are only calculated for elements that are in view (according to IntersectionObserver). Every observer is destroyed when no longer in use.
+
+## Todo
+
+- ✅ Use intersection observer to improve performance 
 - Typescript declarations
 - Add `property` as an option
