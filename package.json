@@ -1,6 +1,6 @@
 {
   "name": "react-parallax-hook",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "An easy to use and customisable parallax implementation",
   "main": "index.js",
   "repository": {

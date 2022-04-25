@@ -16,13 +16,20 @@ exports.useParallax = () => {
           const { y, top, height } =
             targets.current[key].element.getBoundingClientRect();
 
-          const fromCenter = +(
-            ((y ?? top) + height / 2) / (window.innerHeight / 2) -
-            1
-          ).toFixed(2);
+          const fromPoint = (() => {
+            if (targets.current[key]?.config.from === 'top') {
+              return +(window.scrollY / window.innerHeight).toFixed(2);
+            }
+
+            // Default: from center
+            return +(
+              ((y ?? top) + height / 2) / (window.innerHeight / 2) -
+              1
+            ).toFixed(2);
+          })();
 
           targets.current[key].element.style.transform = `translateY(${
-            fromCenter * (targets.current[key]?.config.multiplier || -60)
+            fromPoint * (targets.current[key]?.config.multiplier || -60)
           }px)`;
         });
     });
