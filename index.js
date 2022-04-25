@@ -36,11 +36,13 @@ exports.useParallax = () => {
 
   const count = useRef(0);
 
-  return (config) => {
+  return (elConfig) => {
     return (el) => {
       if (!el) {
         return;
       }
+
+      const config = elConfig || {};
 
       const index = `${count.current++}`;
       targets.current[index] = {
