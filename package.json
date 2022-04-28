@@ -1,5 +1,5 @@
 {
-  "name": "react-parallax-hook",
+  "name": "@olc-digital/react-parallax-hook",
   "version": "0.0.9",
   "description": "An easy to use and customisable parallax implementation",
   "main": "index.js",
@@ -30,5 +30,8 @@
   ],
   "dependencies": {
     "react-intersection-observer": "^8.33.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
